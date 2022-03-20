@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <script>
+//3 - Drofo e Topper estão em uma aventura mágica.
+// Faça um programa que contenha um inventário para cada um dos dois aventureiros 
+//- esse inventário será um array.
+
+//Drofo terá um anel da invisibilidade, dois pares de botas mágicas, 
+//uma poção do sono e duas poções da inocência em seu inventário e nessa ordem. 
+
+//Torper terá uma capa da invisibilidade, uma pedra do despertar, 
+//uma varinha das varinhas, uma poção da inocência e duas poções da mentira,
+//poção anti-inteligência e nessa ordem. 
+
+            
+//No meio de sua jornada, Torper consumiu uma das poções da mentira,
+//perdeu sua pedra e ganhou um par de botar mágicas do Drofo, achou um escudo mágico e uma espada mágica. 
+//Descreva cada uma das ações acima. utilizando código (utilize comentários para ficar mais claro). 
+
+//No meio da sua jornada, Drofo, ganhou mais uma bota mágica, 
+//usou sua poção do sono e consumiu a poção anti-inteligência do Torper, encontrou um ovo de dragão e uma coxinha.
+//Descreva cada uma das ações acima. utilizando código.     
+
+//Exiba o resultado final de cada um dos inventários utilizando "document.write"
+
+       
+
+          var drofo = [
+              "anel de invisibilidade,",
+              "par de botas1,",
+              "par de botas2,",
+              "poção do sono",
+              "poção de inocencia1,",
+              "poção de inocencia2,",
+              
+          ];
+
+          var topper =[
+              "capa da invisibilidade,",
+              "pedra do despertar,", //-
+              "varinha das varinhas,",
+              "poçao da inocência,",
+              "poção da mentira1", //-
+              "poção da mentira2",
+              "poção anti-inteligência",
+                //par de botas que ganhou +
+                //escudo mágico +
+                //espada mágica +
+          ];
+          
+          topper.splice(4,1) //topper perdeu a poção da mentira
+          topper.splice(1,1) //topper perdeu a pedra do despertar
+          topper.push("par de botas1"); //topper ganhou um par de botas do drofo
+          alert(topper)
+          drofo.splice(1,1) //drofo deu um par de botas para topper
+          alert(drofo) //alertou o inventario de drofo após dar o par de botas para topper
+          topper.push("Escudo mágico", "Espada mágica") //topper encontrou um escudo mágico e uma espada mágica.
+          alert(topper) //alertou o inventario de topper após ganhar um escudo mágico e uma espada mágica.
+          
+          drofo.push("Par de botas3")//drofo encontrou um par de botas
+          drofo.splice(2,1) //drofo consumiu a poção do sono
+          
+          topper.splice(4,1)//drofo consumiu a poção de anti-inteligencia do topper
+          drofo.push("Ovo de dragão", "Coxinha")//Drofo encontrou um ovo de dragão e uma coxinha.
+
+          document.write(`<h1>Inventário do Drofo</h1>    ${drofo}`)
+          document.write(`<h1>Inventário do Torper</h1>   ${topper}`)
+
+    </script>
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+</body>
+</html>
